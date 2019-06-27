@@ -13558,7 +13558,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
-<p>Eu tentei prever o atributo "Fresh", porém com base no coeficiente de determinção R^2, este atributo falhou com -0,25. Isso se deve à perda de informações relevantes que não estão correlacionadas aos recursos restantes no conjunto de dados</p>
+<p>Eu tentei prever o atributo "Fresh", porém com base no coeficiente de determinção R^2, este atributo falhou com -0,25. Com isso é possível entender que a categoria "Fresh" não está diretamente correlacionada as categorias restantes do conjunto de dados, o que pode dificultar um pouco no entendimento dos hábitos dos clientes.</p>
 
 </div>
 </div>
@@ -13729,6 +13729,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
 <p>A partir Scatter plot e o Heatmap, foi possivel analisar uma grande correlação entre os atributos "Grocery" e "detergent Paper", e também entre "Milk" e "Grocery".Também é possivel confirmar que a categoria Fresh não tem forte correlação com quase nenhum outro atributo.</p>
+<p>No geral, as distribuições dos pontos parecem um pouco distorcidas em relação às origem e não seguem um padrão. Isso sugere que pontos de menor consumo podem comprometer a parte dos clientes.</p>
 
 </div>
 </div>
@@ -14808,9 +14809,23 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
-<p>Nas duas primeiras dimensões foi explicado 70,68% da variancia no dados. Já nos quatros componentes principais a variância foi explicada 93,11%.</p>
-<p>A 4º Dimensão explica bem a despesa dos clientes, pois tem uma grande porcentagem voltada para a categoria "Frozen" e "Detergents_papers" o que pode explicar que seja restaurantes ou hóteis, por conta das menores despesas com "Grocery" e "Milk".</p>
-<p>A 3º dimensão demonstrou uma maior consumo nos atributos de "delicatessen" e "frozen", que podemos imaginar que seja comércio voltado a comidas finas e Congeladas.</p>
+<p>Analisando melhor o gráfico acima, suponho que talvez esteja mostrando os resultados de algumas dimensões invertidos, enviesando minha ultima análise.</p>
+<ul>
+<li>Para as duas primeiras dimensões temos o total de 70,68% da variância no dados explicada. </li>
+<li>Já nos quatros componentes principais a variância explicada corresponde a 93,11% dos dados.</li>
+</ul>
+<p><strong>Considerando que as duas primeiras dimensões podem estar com os valores invertidos.</strong></p>
+<ul>
+<li><p><strong>1° dimensão</strong> contém grande consumo na categoria de "Detergents Paper", seguido de "Grocery" e "Milk". Devido ao menor consumo de produtos das categorias "Fresh" e "Frozen" mas mesmo assim não deixando de consumir, por mais que seja em menor escala. Suponho que possa ser supermercado ou mercados de bairro.</p>
+</li>
+<li><p><strong>2° dimensão</strong> explica muito bem o comportamento de consumo destes clientes, devido ao alto consumo nas categorias "Fresh", "Frozen" e "Delicatessen", que muito provavelmente possa ser Restaurantes, hóteis e Restaurantes gourmets.</p>
+</li>
+<li><p><strong>3º dimensão</strong> tem um grande consumo na categoria de "Delicatessen", seguido de "Detergents Paper" o que pode sugerir pequenas lojas de conveniências.</p>
+</li>
+<li><p><strong>4º Dimensão</strong> devido ao grande volume de consumo na categoria "Frozen", e em menor escala "Detergents Paper". Sugere que seja algum tipo de exportador de carnes, frigorificos ou até mesmo de peixes. E a grande necessidade de manter a higiene do local leva ao gasto de produtos de limpeza.</p>
+</li>
+</ul>
+<p>Na minha opinião a 2° dimensão explica muito bem o comportamento dos clientes, reforçando minhas hipóteses em análises posteriores a esta, que podem comprovar que nesta massa de dados há uma quantidade razoável de restaurantes. Não menos importantes a 4° dimensão também define muito bem o tipo de consumidor que temos mais voltado para a área de distribuição de produtos congelados.</p>
 
 </div>
 </div>
